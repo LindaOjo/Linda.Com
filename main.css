@@ -16,6 +16,7 @@
 
 ul{
     display: flex-box;
+    position: relative;
     flex-wrap: wrap;
     text-align: end;
     align-items: center;
@@ -27,7 +28,7 @@ ul{
 ul>li{
     display: inline-flex;
     flex-wrap: wrap;
-    padding: 0 3rem;
+    padding: 1rem 3rem;
 }
 
 
@@ -38,14 +39,30 @@ li>a{
     font-size: larger;
 }
 
+
 a:hover{
-    color: #38cead;
+    color:  black;
+    text-decoration: underline;
 }
 
 .content{
-    background-image: linear-gradient(to left, #000000 , #03352a,  #145f4f, #27957e, #38cead);
+    background: linear-gradient(45deg, #ee7752, #be376b, #2081a5, #23d5ab);
+    background-size: 400% 400%;
     min-width: 100vw;
     min-height: 100vh;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .text{
@@ -53,7 +70,7 @@ a:hover{
     font-size: 5rem;
     position: absolute;
     color: #0d3a30;
-    top: 13rem;
+    top: 20rem;
     left: 5rem;
     max-width: 100vw;
     min-height: 50vh;
